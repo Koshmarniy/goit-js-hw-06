@@ -17,7 +17,7 @@ const images = [
 
 const elUl = document.querySelector('.gallery')
 
-const elements = images.map(({url,alt})=>`<li><img url="${url}" alt="${alt}"></li>`)
+const elements = images.map(({url,alt})=>`<li><img url="${url}" alt="${alt}"></li>`).join('')
 console.log(elements)
 
 elUl.insertAdjacentHTML('afterbegin', elements)
