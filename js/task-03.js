@@ -21,5 +21,6 @@ const elements = images.map(({url,alt})=>`<li><img url="${url}" alt="${alt}"></l
 console.log(elements)
 
 elUl.insertAdjacentHTML('afterbegin', elements)
+elUl.classList.toggle('random-class')
 
 
