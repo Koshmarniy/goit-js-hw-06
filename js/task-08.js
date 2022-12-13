@@ -5,12 +5,13 @@ form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event){
 event.preventDefault();
 
-const formData = new FormData(event.currentTarget);
+const {
+    elements: {email, password}
+} = event.currentTarget;
 
-formData.forEach((value, name) => {
-    console.log('onFormSubmit ->', name)
-    console.log('onFormSubmit -> value', value);
-    
-})
-console.log([formData])
+if (email.value === "" || password.value ==="") {
+    return console.log("Всі поля мають бути заповнені ");
+}
+console.log(`Email: ${email.value}, Password: ${password.value}`);
+event.currentTarget.reset();
 }
