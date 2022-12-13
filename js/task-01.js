@@ -1,30 +1,39 @@
 const navEl = document.querySelectorAll('.item');
-console.log(navEl);
+console.log(`Number of categories: ${navEl.length}`); 
 
-const numdOfCategories = navEl.length;
-console.log("Number of categories:", numdOfCategories)
+const navLi = document.querySelectorAll("#categories>li");
 
-///////////////////////////
+navLi.forEach((elem) => {
+    console.log(`Category: ${elem.firstElementChild.textContent}, Elements: ${elem.lastElementChild.children.length}`)
+})
 
-const findFirstH = navEl[0].firstElementChild.textContent;
-console.log('Category:', findFirstH)
+// const navEl = document.querySelectorAll('.item');
+// console.log(navEl);
 
-const findFirstHLength = navEl[0].lastElementChild.children.length;
-console.log(findFirstHLength)
+// const numdOfCategories = navEl.length;
+// console.log("Number of categories:", numdOfCategories)
 
-///////////////////////////////////////////////////
-const findSecondH = navEl[1].firstElementChild.textContent;
-console.log('Category:', findSecondH)
+// ///////////////////////////
 
-const findSecondHLength = navEl[1].lastElementChild.children.length;
-console.log(findSecondHLength)
+// const findFirstH = navEl[0].firstElementChild.textContent;
+// console.log('Category:', findFirstH)
 
-//////////////////////////////////////////////////////////
-const findLastH = navEl[2].firstElementChild.textContent;
-console.log('Category:', findLastH)
+// const findFirstHLength = navEl[0].lastElementChild.children.length;
+// console.log(findFirstHLength)
 
-const findLastHLength = navEl[2].lastElementChild.children.length;
-console.log(findLastHLength)
+// ///////////////////////////////////////////////////
+// const findSecondH = navEl[1].firstElementChild.textContent;
+// console.log('Category:', findSecondH)
+
+// const findSecondHLength = navEl[1].lastElementChild.children.length;
+// console.log(findSecondHLength)
+
+// //////////////////////////////////////////////////////////
+// const findLastH = navEl[2].firstElementChild.textContent;
+// console.log('Category:', findLastH)
+
+// const findLastHLength = navEl[2].lastElementChild.children.length;
+// console.log(findLastHLength)
 
 
 
