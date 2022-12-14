@@ -10,16 +10,36 @@ const ingredients = [
 
 const ul = document.querySelector('#ingredients')
 
-const elements = [];
-for (let i = 0; i <ingredients.length; i += 1) {
-  const setLi = ingredients[i];
-
+const elements = ingredients.map((setLi)=> {
+  
   const li = document.createElement('li');
-  li.classList.add('site-nav__item');
-  li.textContent = setLi;
-  elements.push(li);
-}
-ul.append(...elements)
+    li.classList.add('site-nav__item');
+    li.textContent = setLi;
+    return li 
+  });
+
+  ul.append(...elements)
+
+
+
+// const ul = document.querySelector('#ingredients')
+
+// const elements = [];
+// for (let i = 0; i <ingredients.length; i += 1) {
+//   const setLi = ingredients[i];
+
+//   const li = document.createElement('li');
+//   li.classList.add('site-nav__item');
+//   li.textContent = setLi;
+//   elements.push(li);
+// }
+// ul.append(...elements)
+
+
+
+
+
+
 
 
 // const li1 = document.createElement('li1')
